@@ -2,6 +2,15 @@
   "name": "my-dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cbrekrut.github.io/my-dashboard",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
     "@testing-library/dom": "^10.4.0",
@@ -13,6 +22,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "classnames": "^2.5.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.516.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -20,11 +30,10 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10"
   },
   "eslintConfig": {
     "extends": [
@@ -43,10 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.10"
   }
 }
