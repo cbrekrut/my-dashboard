@@ -170,21 +170,6 @@ export default function Dashboard() {
     setProjects(sampleProjects);
   }, []);
 
-  const generateDocumentation = () => {
-    if (!selectedProject) return;
-
-    const newDocs = generateExecutiveDocs();
-
-    const updated = projects.map(p =>
-    p.name === selectedProject.name
-        ? { ...p, documents: newDocs }
-        : p
-    );
-    setProjects(updated);
-    setSelectedProject({ ...selectedProject, documents: newDocs });
-    alert(`Сформирована исполнительная документация для проекта: ${selectedProject.name}`);
-  };
-
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-8">БМ-Электро — проекты</h1>
